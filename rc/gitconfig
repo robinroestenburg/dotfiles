@@ -1,0 +1,106 @@
+[core]
+  whitespace=trailing-space,-indent-with-non-tab,cr-at-eol,tab-in-indent
+
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  df = diff
+
+  ap = add --patch
+  aa = add --all 
+
+  up = pull --ff-only
+  ff = merge --ff-only
+ 
+  unstage = reset HEAD
+  ready = rebase -i @{u}
+  added = diff --cached --name-only
+  new = ls-files --others --exclude-standard
+  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+
+  #l = "!source ~/.dotfiles/script/githelpers && pretty_git_log"
+  #la = !git l --all
+  #hp = "!source ~/.dotfiles/script/githelpers && show_git_head"
+  #scoreboard = "!git log | grep '^Author' | sort | uniq -ci | sort -r"
+  
+[color]
+  ui = auto
+  
+[branch]
+  autosetuprebase = always
+
+[diff]
+
+  # Tells Git to detect renames. If set to any boolean value, it will
+  # enable basic rename detection. If set to "copies" or "copy", it
+  # will detect copies, as well.
+  renames = copies
+
+  # TODO: Look at difference in diff algorithms.
+
+[format]
+  # TODO: Look at the pretty variable.
+
+[help]
+
+  # Automatically correct and execute mistyped commands after waiting
+  # for the given number of deciseconds (0.1 sec). If more than one
+  # command can be deduced from the entered text, nothing will be
+  # executed. If the value of this option is negative, the corrected
+  # command will be executed immediately. If the value is 0 - the
+  # command will be just shown but not executed. This is the default.
+  autocorrect = 1
+
+[merge]
+
+  # Specify the style in which conflicted hunks are written out to
+  # working tree files upon merge. The default is "merge", which shows
+  # a <<<<<<< conflict marker, changes made by one side, a =======
+  # marker, changes made by the other side, and then a >>>>>>> marker.
+  # An alternate style, "diff3", adds a ||||||| marker and the original
+  # text before the ======= marker.
+  conflictstyle = diff3
+
+[pretty]
+  # Alias for a --pretty= format string, as specified in git-log(1).
+  # Any aliases defined here can be used just as the built-in pretty
+  # formats could. For example, running git config pretty.changelog
+  # "format:* %H %s" would cause the invocation git log
+  # --pretty=changelog to be equivalent to running git log
+  # "--pretty=format:* %H %s". Note that an alias with the same name as
+  # a built-in format will be silently ignored.
+
+  # <name>
+
+[push]
+  # upstream - push the current branch to its upstream branch
+  # (tracking is a deprecated synonym for this). With this, git
+  # push will update the same remote ref as the one which is merged
+  # by git pull, making push and pull symmetrical. See
+  # "branch.<name>.merge" for how to configure the upstream branch.
+  #
+  #  simple - like upstream, but refuses to push if the upstream
+  # branch's name is different from the local one. This is the
+  # safest option and is well-suited for beginners. It will become
+  # the default in Git 2.0.
+  default = simple
+
+[rerere]
+  # TODO: Checkout enabled..
+
+
+# GIT_EDITOR overrides EDITOR (same for me)
+
+# GIT_AUTHOR_EMAIL
+# GIT_COMMITTER_EMAIL
+# EMAIL
+# GIT_AUTHOR_NAME
+# GIT_COMMITTER_NAME
+
+[credential]
+  # Specify an external helper to be called when a username or password
+  # credential is needed; the helper may consult external storage to
+  # avoid prompting the user for the credentials.
+  helper = osxkeychain
