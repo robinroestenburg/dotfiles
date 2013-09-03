@@ -9,11 +9,11 @@
   df = diff
 
   ap = add --patch
-  aa = add --all 
+  aa = add --all
 
   up = pull --ff-only
   ff = merge --ff-only
- 
+
   unstage = reset HEAD
   ready = rebase -i @{u}
   added = diff --cached --name-only
@@ -24,10 +24,10 @@
   #la = !git l --all
   #hp = "!source ~/.dotfiles/script/githelpers && show_git_head"
   #scoreboard = "!git log | grep '^Author' | sort | uniq -ci | sort -r"
-  
+
 [color]
   ui = auto
-  
+
 [branch]
   autosetuprebase = always
 
