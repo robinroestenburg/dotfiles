@@ -1,7 +1,6 @@
 [core]
   whitespace=trailing-space,-indent-with-non-tab,cr-at-eol,tab-in-indent
 
-
 [alias]
   co = checkout
   ci = commit
@@ -20,10 +19,10 @@
   new = ls-files --others --exclude-standard
   today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 
-  #l = "!source ~/.dotfiles/script/githelpers && pretty_git_log"
-  #la = !git l --all
-  #hp = "!source ~/.dotfiles/script/githelpers && show_git_head"
-  #scoreboard = "!git log | grep '^Author' | sort | uniq -ci | sort -r"
+  l = "!source ~/.dotfiles/script/git-helpers && pretty_git_log"
+  la = !git l --all
+  hp = "!source ~/.dotfiles/script/git-helpers && show_git_head"
+  scoreboard = "!git log | grep '^Author' | sort | uniq -ci | sort -r"
 
 [color]
   ui = auto
