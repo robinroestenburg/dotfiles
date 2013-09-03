@@ -90,15 +90,6 @@
 [rerere]
   # TODO: Checkout enabled..
 
-
-# GIT_EDITOR overrides EDITOR (same for me)
-
-# GIT_AUTHOR_EMAIL
-# GIT_COMMITTER_EMAIL
-# EMAIL
-# GIT_AUTHOR_NAME
-# GIT_COMMITTER_NAME
-
 [credential]
   # Specify an external helper to be called when a username or password
   # credential is needed; the helper may consult external storage to
