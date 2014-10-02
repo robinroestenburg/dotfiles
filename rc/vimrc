@@ -242,7 +242,7 @@ let g:CommandTAlwaysShowDotFiles = 1
 " A list of file patterns.  A file that matches with one of these patterns is
 " ignored when completing file or directory names, and influences the result of
 " |expand()|, |glob()| and |globpath()| unless a flag is passed to disable this.
-set wildignore+=.vim/bundle/**,.git,generated/**,.sass-cache/**,tmp/**,.jhw-cache/**,build/**,node_modules/**,coverage/**
+set wildignore+=.vim/bundle/**,.git,generated/**,.sass-cache/**,tmp/**,.jhw-cache/**,build/**,node_modules/**,coverage/**,.vagrant/**
 
 "
 " Display settings
