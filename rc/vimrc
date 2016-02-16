@@ -172,6 +172,9 @@ nmap <leader>a :call RunTests('')<cr>
 nmap <leader>f :w\|:!script/features<cr>
 nmap <leader>fw :w\|:!script/features --profile wip<cr>
 
+" Ack shortcut
+noremap <Leader>s :Ack <cword> --ignore log/ --ignore db/ --ignore tmp/<cr>
+
 " Since syntastic was added, :E has an ambiguous mapping.
 " This reverts the old behaviour of starting Netrw.
 cnoreabbrev E Explore
@@ -222,6 +225,13 @@ set softtabstop=2
 
 " Number of spaces that a <Tab> in the file counts for.
 set tabstop=2
+
+"
+" Ack.vim
+"
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "
 " Command-T
