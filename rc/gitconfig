@@ -88,9 +88,3 @@
 
 [rerere]
   # TODO: Checkout enabled..
-
-[credential]
-  # Specify an external helper to be called when a username or password
-  # credential is needed; the helper may consult external storage to
-  # avoid prompting the user for the credentials.
-  helper = osxkeychain

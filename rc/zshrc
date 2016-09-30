@@ -1,5 +1,12 @@
-source ~/.dotfiles/config/local.zsh
-source ~/.dotfiles/config/global.sh
+. ~/.dotfiles/config/local.zsh
+. ~/.dotfiles/config/global.sh
+. ~/.dotfiles/config/personal.zsh
+
+powerline-daemon -q
+. /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+
+DIR="/home/eltaeb/projects/itrp-operations/bin"
+alias qop="${DIR}/qop"
 
 # Define the directories you store your projects in in
 #   ~/.dotfiles/script/personal.zsh
@@ -7,14 +14,6 @@ source ~/.dotfiles/config/global.sh
 # PROJECT_PARENT_DIRS+=("$HOME/Projects")
 
 # PROJECT_PARENT_DIRS=()
-
-if [[ -f ~/.dotfiles/config/personal.zsh ]]; then
-  source ~/.dotfiles/config/personal.zsh
-fi
-
-if [[ -f ~/.dotfiles/config/personal.sh ]]; then
-  source ~/.dotfiles/config/personal.sh
-fi
 
 # for PARENT_DIR in ${PROJECT_PARENT_DIRS[@]} ; do
 #   if [ -d "$PARENT_DIR" ]; then
