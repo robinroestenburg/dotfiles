@@ -2,24 +2,56 @@
 
 This repository contains my ZSH, Git and Vim settings.
 
-## Usage
+## Installation
 
-### Prerequisites
+### Pre-requisites
 
 You must have the following installed:
 
-* Xcode (including Command Line Tools)
-* iTerm2
-* Homebrew
+* [iTerm2](https://www.iterm2.com)
+* [Homebrew](https://brew.sh)
 
-### Installation
+### Code
 
 To install the dotfiles:
 
-```
+```zsh
 git clone https://github.com/robinroestenburg/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./script/install
+```
+
+### Homebrew
+
+To install all Homebrew tools listed in `Brewfile`:
+
+```zsh
+brew bundle
+```
+
+### asdf
+
+[asdf](https://asdf-vm.com/) is used to manage runtimes. Example usage:
+
+Install Ruby globally:
+
+```zsh
+asdf plugin add ruby
+asdf install ruby 3.2.4
+asdf global ruby 3.2.4
+```
+
+Install Node locally:
+
+```zsh
+asdf plugin add nodejs
+asdf install nodejs 20.11.1
+```
+
+To update all plugins, when new versions come out:
+
+```zsh
+asdf plugin update --all
 ```
 
 ### Configuration

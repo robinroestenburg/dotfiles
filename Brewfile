@@ -6,11 +6,19 @@ brew "tree-sitter"
 brew "fd"
 brew "ripgrep"
 
+# database
+brew "mysql-client"
+
 # tools & utilities
+brew "asdf"
 brew "awscli"
 brew "git"
-brew "tmux"
 brew "jq"
+brew "shared-mime-info"
+brew "tmux"
+# required to install mysql2 gem, command:
+# - gem install mysql2 -v '0.5.6' -- --with-openssl-dir=$(brew --prefix openssl@3) --with-ldflags=-L$(brew --prefix zstd)/lib
+brew "zstd"
 
 # fonts
 cask "font-agave-nerd-font"
