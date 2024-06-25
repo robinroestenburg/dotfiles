@@ -1,0 +1,10 @@
+# Ruby aliases
+alias rdm='rake db:migrate db:test:prepare'
+alias rr='mkdir -p tmp && touch tmp/restart.txt'
+alias c='bundle exec cucumber -r features'
+alias wip='c --profile wip'
+# alias specdoc='time rspec -fd'
+# alias s='rspec --require ~/.dotfiles/script/rspec_focus --order default --color --tty'
+alias be='bundle exec'
+alias irb='pry'
+# alias guard='bundle exec guard'

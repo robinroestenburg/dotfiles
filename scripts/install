@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require "fileutils"
+
+def symlink(from, to)
+  # print "Installing #{from} to #{to}... "
+  from = File.expand_path("../#{from}", __dir__)
+  to = File.expand_path(to)
+  FileUtils.mkdir_p(File.dirname(to))
+  if File.exist?(to)
+    if File.directory?(from) || File.directory?(to)
+      puts "Skipping #{to}, because I don't want to compare whole directories"
+    elsif FileUtils.identical?(from, to)
+      puts "Skipping #{to}, files are identical"
+    else
+      backup = "#{to}.bak"
+      puts "Making backup of #{to} in #{backup}"
+      FileUtils.copy_file(to, backup)
+      FileUtils.ln_sf(from, to, verbose: true)
+    end
+  else
+    FileUtils.ln_s(from, to, verbose: true)
+  end
+end
+
+Dir["rc/*"].each do |f|
+  symlink f, "~/.#{File.basename(f)}"
+end
+
+symlink "config/nvim", "~/.config/nvim"

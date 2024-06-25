@@ -1,0 +1,14 @@
+source "$HOME/.dotfiles/config/zsh/global.sh"
+source "$HOME/.dotfiles/config/zsh/personal.sh"
+
+# prompt
+setopt prompt_subst
+PROMPT='$($HOME/.dotfiles/scripts/prompt $?)'
+
+
+# asdf config must be all the way at the bottom
+# source $(brew --prefix asdf)/asdf.sh
+# brew prefix is a little slow, so here's the direct version instead:
+# if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then
+#   source /usr/local/opt/asdf/asdf.sh
+# fi
