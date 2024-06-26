@@ -16,6 +16,8 @@ brew "git"
 brew "jq"
 brew "shared-mime-info"
 brew "tmux"
+# https://github.com/ajeetdsouza/zoxide
+brew "zoxide"
 # required to install mysql2 gem, command:
 # - gem install mysql2 -v '0.5.6' -- --with-openssl-dir=$(brew --prefix openssl@3) --with-ldflags=-L$(brew --prefix zstd)/lib
 brew "zstd"

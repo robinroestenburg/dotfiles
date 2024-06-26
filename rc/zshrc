@@ -8,5 +8,8 @@ alias qop="/opt/itrp/4me-operations/bin/qop"
 setopt prompt_subst
 PROMPT='$($HOME/.dotfiles/scripts/prompt $?)'
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # asdf
 source $(brew --prefix asdf)/libexec/asdf.sh
