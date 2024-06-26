@@ -15,6 +15,7 @@ brew "awscli"
 brew "git"
 brew "jq"
 brew "shared-mime-info"
+cask "sourcetree"
 brew "tmux"
 # https://github.com/ajeetdsouza/zoxide
 brew "zoxide"
