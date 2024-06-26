@@ -10,6 +10,7 @@
   ap = add --patch
   aa = add --all
 
+  fa = fetch --all --prune
   up = pull --ff-only
   ff = merge --ff-only
 
@@ -51,6 +52,9 @@
   # command will be executed immediately. If the value is 0 - the
   # command will be just shown but not executed. This is the default.
   autocorrect = 1
+
+[pull]
+  rebase = true
 
 [merge]
 
