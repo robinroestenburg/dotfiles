@@ -27,4 +27,6 @@ Dir["rc/*"].each do |f|
   symlink f, "~/.#{File.basename(f)}"
 end
 
-symlink "config/nvim", "~/.config/nvim"
+symlink "Brewfile", "~/Brewfile"
+
+#symlink "config/nvim", "~/.config/nvim"

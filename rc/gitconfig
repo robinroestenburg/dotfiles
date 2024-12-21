@@ -66,6 +66,9 @@
   # text before the ======= marker.
   conflictstyle = diff3
 
+[submodule]
+  #recurse = true
+
 [pretty]
   # Alias for a --pretty= format string, as specified in git-log(1).
   # Any aliases defined here can be used just as the built-in pretty
@@ -89,6 +92,10 @@
   # safest option and is well-suited for beginners. It will become
   # the default in Git 2.0.
   default = simple
+
+  # If set to "true" assume --set-upstream on default push when no upstream
+  # tracking exists for the current branch.
+  autoSetupRemote = true
 
 [rerere]
   # TODO: Checkout enabled..
