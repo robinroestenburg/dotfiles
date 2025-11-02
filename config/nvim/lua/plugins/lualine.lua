@@ -1,6 +1,6 @@
 local opts = {
   options = {
-    theme = 'tokyonight',
+    theme = 'catppuccin-frappe',
     globalstatus = true,
   }
 }

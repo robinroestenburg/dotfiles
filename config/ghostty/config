@@ -1,7 +1,7 @@
 font-family = MonaLisa
 font-size = 16
 
-theme = "TokyoNight Storm"
+theme = Catppuccin Frappe
 
 clipboard-trim-trailing-spaces = true
 copy-on-select = true
