@@ -66,9 +66,6 @@
   # text before the ======= marker.
   conflictstyle = diff3
 
-[submodule]
-  #recurse = true
-
 [pretty]
   # Alias for a --pretty= format string, as specified in git-log(1).
   # Any aliases defined here can be used just as the built-in pretty

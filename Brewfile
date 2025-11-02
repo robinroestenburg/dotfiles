@@ -7,11 +7,16 @@ brew "neovim"
 brew "tree-sitter"
 
 #
+# tmux
+#
+brew "tmux"
+brew "tmuxinator"
+
+#
 # tools & utilities
 #
 brew "mise"
 brew "awscli"
-brew "tmux"
 brew "ripgrep"
 brew "jq"
 # user-friendly alternative to find

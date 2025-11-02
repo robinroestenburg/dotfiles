@@ -29,4 +29,6 @@ end
 
 symlink "Brewfile", "~/Brewfile"
 
-#symlink "config/nvim", "~/.config/nvim"
+symlink "config/tmuxinator", "~/.config/tmuxinator"
+symlink "config/nvim", "~/.config/nvim"
+symlink "config/ghostty", "~/.config/ghostty"

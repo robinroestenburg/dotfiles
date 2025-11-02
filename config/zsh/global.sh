@@ -14,11 +14,12 @@ alias less='less -R' # color codes in less
 alias grep='grep --colour=always'
 
 # editor
-export EDITOR="vim"
-alias v="vim"
-alias vi="vim"
+export EDITOR="nvim"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
 # import other configs
 source "$HOME/.dotfiles/config/zsh/git.sh"
 source "$HOME/.dotfiles/config/zsh/ruby.sh"
-# source "$HOME/.dotfiles/config/zsh/tmux.sh"
+source "$HOME/.dotfiles/config/zsh/tmux.sh"

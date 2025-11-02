@@ -1,0 +1,42 @@
+name: automator
+root: ~/Projects/automator
+
+# Optional tmux socket
+# socket_name: foo
+
+# Project hooks
+
+# Runs on project start, always
+on_project_start: git fetch --all -p
+
+# Run on project start, the first time
+# on_project_first_start: command
+
+# Run on project start, after the first time
+# on_project_restart: command
+
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+
+# Run on project stop
+# on_project_stop: command
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Enables the display of pane titles. For example "editor" below. Defaults to false.
+# enable_pane_titles: true
+
+# Configures pane title position. Can be: bottom, top, or "off". Note: "off" must be provided in quotes to avoid being interpreted as a boolean false. Defaults to top.
+# pane_title_position: bottom
+
+# Configures pane title format. Defaults to "#{pane_index}: #{pane_title}".
+# Please see the tmux manpage for details, on valid formats.
+# pane_title_format: " [ #T ] "
+
+windows:
+  - editor: nvim
+  - server: bin/dev
+  - ops:
+      root: ~/Projects/automator-ops
+  - ngrok: ngrok start --all
