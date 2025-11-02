@@ -1,0 +1,9 @@
+font-family = MonaLisa
+font-size = 16
+
+theme = "TokyoNight Storm"
+
+clipboard-trim-trailing-spaces = true
+copy-on-select = true
+right-click-action = copy-or-paste
+
