@@ -57,3 +57,8 @@ local opts = {
 }
 
 require("lazy").setup('plugins', opts)
+
+
+-- [[ LSP ]]
+
+vim.lsp.enable("ruby-lsp")
