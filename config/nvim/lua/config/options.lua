@@ -1,6 +1,7 @@
 local opt = vim.opt
 local api = vim.api
 
+
 -- [[ Display ]]
 
 -- Show numbers relative to current cursor position
@@ -54,7 +55,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 
--- [[ Rest ]]
+-- [[ Other ]]
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 opt.mouse = "a"
@@ -83,6 +84,7 @@ opt.inccommand = "split"
 -- Don't show the mode, since it's already in the status line
 opt.showmode = false
 
+
 -- [[ Behavior ]]
 
 opt.hidden = true
@@ -95,6 +97,24 @@ opt.swapfile = false
 -- read
 opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.undofile = true
+
+-- Automatically reload files when they've been changed outside of Vim
+--
+-- `autoread` tells Vim to reload files when they change externally, but only
+-- when checktime is called. The autocommands below trigger checktime on:
+--   - FocusGained: When Vim/terminal regains focus
+--   - BufEnter: When entering a buffer
+--   - CursorHold/CursorHoldI: When cursor is idle (after 'updatetime' ms)
+-- Together, this ensures files are refreshed when external changes occur.
+opt.autoread = true
+api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd('checktime')
+    end
+  end,
+})
 
 
 -- [[ Indentation ]]
@@ -116,6 +136,7 @@ opt.tabstop = 2
 
 -- When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.
 opt.smarttab = true
+
 
 -- [[ Completion ]]
 
